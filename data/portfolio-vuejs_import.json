@@ -1,8 +1,8 @@
 {
   "bucket": {
     "_id": "5f00bd777c62a200080e8faf",
-    "slug": "hugobollonme",
-    "title": "hugobollon.me",
+    "slug": "elmehdime",
+    "title": "elmehdi.me",
     "object_types": [
       {
         "title": "portfolio-contents",
@@ -51,19 +51,22 @@
             "id": "FtSwl0XI9C",
             "value": [
               {
-                "year": "01.2020 - 05.2020",
-                "title": "Urbalog LAET Project",
-                "content": "Digitizing the Urbalog board game on Android with the Nearby Connection API"
+                "year": "07.2020 - 08.2020",
+                "title": "ADVISORIS - File Repository",
+                "place":"Casablanca, Morocco",
+                "content": "Solves the redudant data-sharing issue Advisoris had with it's client. By providing a web app with: session based authentication, a custom admin panel to manage files. The display of files is done using a file tree similar to what Google Drive provides."
               },
               {
-                "year": "07.2019",
-                "title": "Pfeiffer Vacuum SAS, Annecy",
-                "content": "Interim IT mission: implementation of a new Qlickview access management program + Laravel development"
+                "year": "08.2021 - 10-2021",
+                "title": "Wings Technologies - Legal compliance app",
+                "place":"Technopark, Casablanca",
+                "content": "This project aims to digitalize the management of legal compliances for morrocain companies. By easing the import process of already structured laws and standards that range from local to regional. This simplifies the planning, communication and tracking of audit projects ranging from Inspections, Quality Audit to Risk and procurement Audit."
               },
               {
-                "year": "07.2018",
-                "title": "Pfeiffer Vacuum SAS, Annecy",
-                "content": "Interim IT mission: Management of SAP tables and inventory of sub-programs."
+                "year": "02.2022 - 08-2022",
+                "title": "DataMa - Audience analytics app",
+                "place":"Station F, Paris",
+                "content": "I worked on improving the data preparation platform (Prep) that helps data analysts organise, filter and clean their data before plugin it into analysis solutions such as compare , pivot , impact and journey"
               }
             ],
             "required": true
@@ -76,20 +79,15 @@
             "id": "b2a969sy7g",
             "value": [
               {
-                "year": "From September 2020",
-                "title": "Computer Science Master at USMB",
-                "content": "Specialized in artificial intelligence and collaborative systems"
+                "year": "2019-2022",
+                "title": "Software enginnering",
+                "content": "École Nationale Supérieure d'Informatique et d'Analyse des Systèmes - ENSIAS , Rabat"
               },
               {
-                "year": "2017 - 2020",
-                "title": "IT License",
-                "content": "University Savoie Mont-Blanc, France"
+                "year": "2017 - 2019",
+                "title": "CPGE - Math/Physics",
+                "content": "Lycée technique, Mohamedia"
               },
-              {
-                "year": "2013 - 2017",
-                "title": "Scientific Baccalaureate",
-                "content": "Lycée de l'Albanais at Rumilly, France"
-              }
             ],
             "required": true
           }
@@ -267,18 +265,10 @@
           {
             "children": null,
             "type": "text",
-            "title": "facebook",
-            "key": "facebook",
-            "id": "gLDrzR50ta",
-            "value": "https://www.facebook.com/hugo.bollon"
-          },
-          {
-            "children": null,
-            "type": "text",
             "title": "instagram",
             "key": "instagram",
             "id": "KMi8FlOyrI",
-            "value": "https://www.instagram.com/_hbollon"
+            "value": "https://www.instagram.com/mehdi_oudaoud/"
           },
           {
             "children": null,
@@ -286,7 +276,7 @@
             "title": "linkedin",
             "key": "linkedin",
             "id": "qVc8Mh2S5A",
-            "value": "https://www.linkedin.com/in/hugobollon"
+            "value": "https://www.linkedin.com/in/el-mehdi-oudaoud/"
           },
           {
             "children": null,
@@ -294,7 +284,7 @@
             "title": "github",
             "key": "github",
             "id": "NPDNo7uSc9",
-            "value": "https://github.com/hbollon"
+            "value": "https://github.com/Elcaveman"
           }
         ],
         "bucket": "5f00bd777c62a200080e8faf",
@@ -329,64 +319,84 @@
             "id": "IEBchE5swc",
             "value": [
               {
-                "title": "C",
-                "img": "C.png"
-              },
-              {
-                "title": "C++",
-                "img": "cplusplus.png"
-              },
-              {
-                "title": "C#",
-                "img": "Csharp.png"
-              },
-              {
-                "title": "Java",
-                "img": "java.png"
-              },
-              {
-                "title": "Unity",
-                "img": "unity.png"
-              },
-              {
-                "title": "HTML",
-                "img": "html.png"
-              },
-              {
-                "title": "CSS",
-                "img": "css.png"
-              },
-              {
-                "title": "PHP",
-                "img": "php.png"
-              },
-              {
-                "title": "Laravel",
-                "img": "laravel.png"
+                "title": "TypeScript",
+                "img": "typescript.png"
               },
               {
                 "title": "VueJS",
                 "img": "vuejs.png"
               },
               {
-                "title": "Android",
-                "img": "android.png"
+                "title": "Nodejs",
+                "img": "nodejs.png"
               },
               {
-                "title": "Linux",
-                "img": "linux.png"
+                "title": "Angular",
+                "img": "angular.png"
               },
               {
-                "title": "Git/Github",
-                "img": "Octocat.png"
+                "title": "CSS",
+                "img": "css.png"
+              },
+              {
+                "title": "Java",
+                "img": "java.png"
+              },
+              {
+                "title": "Spring Boot",
+                "img": "springboot.png"
+              },
+              {
+                "title": "ElasticSearch",
+                "img": "elasticsearch.png"
+              },
+              {
+                "title": "Python",
+                "img": "python.png"
+              },
+              {
+                "title": "Django",
+                "img": "django.png"
+              },
+              {
+                "title": "Flask",
+                "img": "flask.png"
               },
               {
                 "title": "Go",
                 "img": "go.png"
               },
               {
-                "title": "VPS/Web Hosting",
-                "img": "ovh.png"
+                "title": "Postgres",
+                "img": "postgres.png"
+              },
+              {
+                "title": "MongoDB",
+                "img": "mongo.png"
+              },
+              {
+                "title": "Firebase",
+                "img": "firebase.png"
+              },
+              {
+                "title": "Git/Github",
+                "img": "Octocat.png"
+              },
+              {
+                "title": "Linux",
+                "img": "linux.png"
+              },
+              {
+                "title": "Docker",
+                "img": "docker.png"
+              },
+              {
+                "title": "Ansible",
+                "img": "ansible.png"
+              },
+              {
+                "title": "Jenkins",
+                "img": "jenkins.png"
               }
             ]
           },
