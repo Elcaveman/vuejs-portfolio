@@ -87,7 +87,7 @@
                 "year": "2017 - 2019",
                 "title": "CPGE - Math/Physics",
                 "content": "Lycée technique, Mohamedia"
-              },
+              }
             ],
             "required": true
           }
@@ -187,7 +187,7 @@
             "title": "name",
             "key": "name",
             "id": "OEkbevb9ch",
-            "value": "Hugo Bollon"
+            "value": "El Mehdi Oudaoud"
           },
           {
             "children": null,
@@ -203,7 +203,7 @@
             "title": "email",
             "key": "email",
             "id": "2VhiCIosBh",
-            "value": "hugo.bollon@gmail.com"
+            "value": "02.oudaoud@gmail.com"
           },
           {
             "children": null,
@@ -211,7 +211,7 @@
             "title": "phone",
             "key": "phone",
             "id": "zSqJFpvOeE",
-            "value": "+33 6 51 99 80 78"
+            "value": "+33 7 49 78 79 35"
           },
           {
             "children": null,
@@ -219,7 +219,7 @@
             "title": "city",
             "key": "city",
             "id": "eePnSPzpxY",
-            "value": "Chambéry, France"
+            "value": "Paris, France"
           },
           {
             "children": null,
@@ -227,7 +227,7 @@
             "title": "lang",
             "key": "lang",
             "id": "jh95I8Z7VB",
-            "value": "French, English"
+            "value": "English, French, Arabic, Japanese"
           },
           {
             "children": null,
