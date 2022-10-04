@@ -2,22 +2,17 @@
   <div class="social-wrap">
     <ul class="social-bar">
       <li>
-        <a :href="links.metadata.facebook" target="_blank">
-          <font-awesome-icon class="icon" :icon="['fab', 'facebook-square']" />
-        </a>
-      </li>
-      <li>
-        <a :href="links.metadata.instagram" target="_blank">
+        <a :href="links.instagram" target="_blank">
           <font-awesome-icon class="icon" :icon="['fab', 'instagram-square']" />
         </a>
       </li>
       <li>
-        <a :href="links.metadata.linkedin" target="_blank">
+        <a :href="links.linkedin" target="_blank">
           <font-awesome-icon class="icon" :icon="['fab', 'linkedin']" />
         </a>
       </li>
       <li>
-        <a :href="links.metadata.github" target="_blank">
+        <a :href="links.github" target="_blank">
           <font-awesome-icon class="icon" :icon="['fab', 'github-square']" />
         </a>
       </li>

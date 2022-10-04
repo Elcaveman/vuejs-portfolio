@@ -2,11 +2,11 @@
   <transition name="fade" tag="div" class="wrapper" mode="out-in">
     <div class="wrapper" v-if="isLoaded" id="app">
       <LandingPage :user="user" />
-      <Description :user="user" :content="findSlug('description')" :links="findSlug('links')" />
-      <Experience :content="findSlug('experiences')" />
-      <Skills v-if="skills.length" :skills="skills" />
+      <Description :user="user" :content="description" :links="links" />
+      <Experience :content="experiences" />
+      <Skills :skills="skills" />
       <Projects :projects="projects" />
-      <Footer :user="user" :links="findSlug('links')" />
+      <Footer :user="user" :links="links" />
     </div>
   </transition>
 </template>
@@ -34,63 +34,35 @@ export default {
   data: () => ({
     isLoaded: false,
     user: {},
-    posts: [],
+    experiences: [],
     skills: [],
     projects: [],
+    description:{},
+    links:[]
   }),
   methods: {
-    fetchProjects() {
-      const params = {
-        query: {
-          type: 'projects',
-          // locale: 'en' // optional, if localization set on Objects
-        },
-        props: 'slug,title,content,metadata', // get only what you need
-        sort: 'delivery_date' // optional, defaults to order in dashboard
-      }
-      return bucket.getObjects(params);
+    fetchObject(slug) {
+      return bucket.getObjects({query:{slug:slug}});
     },
-    fetchPosts() {
-      const params = {
-        query: {
-          type: 'posts',
-          // locale: 'en' // optional, if localization set on Objects
-        },
-        props: 'slug,title,content,metadata', // get only what you need
-        sort: '-created_at' // optional, defaults to order in dashboard
-      }
-      return bucket.getObjects(params);
+    fetchUserData(){
+      return this.fetchObject("user-data")
     },
-    fetchSkills() {
-      const params = {
-        query: {
-          type: 'skills',
-          // locale: 'en' // optional, if localization set on Objects
-        },
-        props: 'slug,title,content,metadata', // get only what you need
-        // sort: '-created_at' // optional, defaults to order in dashboard
-      }
-      return bucket.getObjects(params);
+    fetchSkills(){
+      return this.fetchObject("skills")
     },
-    fetchUser() {
-      const params = {
-        query: {
-          type: 'users',
-          // locale: 'en' // optional, if localization set on Objects Les Simpson
-        },
-        limit: 5,
-        props: 'slug,title,content,metadata', // get only what you need
-        sort: '-created_at' // optional, defaults to order in dashboard
-      }
-      return bucket.getObjects(params);
+    fetchLinks(){
+      return this.fetchObject("links")
     },
-    fetchObjectTypes() {
-      return bucket.getObjectTypes();
+    fetchExperiences(){
+      return this.fetchObject("experiences")
     },
-    findSlug(slug) {
-      return this.posts.find((item) => {
-        return item.slug === slug;
-      });
+    fetchDescription(){
+      //for the about me section
+      return this.fetchObject("description")
+    },
+    fetchProjects(){
+      //for the about me section
+      return this.fetchObject("projects")
     },
     extractFirstObject(objects) {
       if(objects.objects == null)
@@ -102,12 +74,15 @@ export default {
   created() {
     document.body.classList.add("loading");
 
-    Promise.all([this.fetchPosts(), this.fetchSkills(), this.fetchProjects(), this.fetchUser()]).then(([posts, skills, projects, user_data]) => {
-      user_data = this.extractFirstObject(user_data);
-      this.posts = posts.objects;
-      console.log("user skills ==>> ", projects.objects)
-      this.skills = skills.objects;
-      this.projects = projects.objects;
+    Promise.all([this.fetchUserData(),this.fetchSkills(),this.fetchLinks(),
+    this.fetchExperiences(),this.fetchDescription(),
+    this.fetchProjects()]).then(([user_data,skills,links,experiences,
+    description]) => {
+      console.log("data",[user_data,skills,links,experiences,
+    description])
+      // this.posts = posts.objects;
+      console.log("user_data",user_data)
+      user_data = user_data.objects[0]
       this.user = {
         name: user_data.metadata.name,
         status: user_data.metadata.status,
@@ -117,6 +92,14 @@ export default {
         lang: user_data.metadata.lang,
         photo: user_data.metadata.photo,
       }
+      this.skills = skills.objects[0].metadata.items;
+      this.links = links.objects[0].metadata;
+      this.experiences = experiences.objects[0].metadata;
+      this.description = description.objects[0].metadata;
+      console.log("user",this.user)
+      console.log("links",this.links)
+      console.log("experiences",this.experiences)
+      console.log("description",this.description)
       this.isLoaded = true;
       this.$nextTick(() => document.body.classList.remove("loading"));
     });
